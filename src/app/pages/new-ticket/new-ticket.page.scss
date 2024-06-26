@@ -1,0 +1,50 @@
+ion-content {
+    .ion-padding {
+        ion-button {
+            padding-top: 10px;
+            width: 100%;
+            color: black;
+            margin: 10px 0px;
+        }
+    }
+
+    .fill {
+        margin-top: 1.5rem;
+
+        ion-item {
+            margin-top: 24px;
+
+            ion-label {
+                font-size: 16px;
+            }
+
+            ion-input {
+                font-size: 16px;
+                color: black;
+                margin-top: 16px;
+            }
+        }
+
+        .gender {
+            ion-col {
+                ion-label {
+                    font-size: 16px;
+                }
+
+                ion-select {
+                    margin-top: 24px;
+                    font-size: 18px;
+                }
+
+                ion-input {
+                    margin-top: 24px;
+                }
+            }
+        }
+    }
+
+    ion-button {
+        height: 50px;
+        margin-top: 1rem;
+    }
+}

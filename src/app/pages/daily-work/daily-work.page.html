@@ -1,0 +1,406 @@
+<!-- <ion-content>
+  <div class="main_div">
+    <ion-slides>
+      <ion-slide>
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/salon.webp)'"
+        ></div>
+      </ion-slide>
+      <ion-slide>
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/salon.webp)'"
+        ></div>
+      </ion-slide>
+      <ion-slide>
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/salon.webp)'"
+        ></div>
+      </ion-slide>
+    </ion-slides>
+
+    <div class="buttons">
+      <div class="btn">
+        <ion-buttons slot="start">
+          <ion-button (click)="back()">
+            <ion-icon name="arrow-back-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+
+        <ion-buttons slot="end">
+          <ion-button (click)="goToNotification()">
+            <ion-icon name="notifications-outline" color="light"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+  </div>
+
+  <div class="content_div">
+    <div class="main_content">
+      <div class="name_div">
+        <ion-label class="salon_name">Bella Rinova</ion-label>
+        <ion-button
+          (click)="onClick()"
+          expand="block"
+          shape="round"
+          color="success"
+        >
+          open
+        </ion-button>
+      </div>
+
+      <ion-label class="address"
+        >6391 Elgin St. Celina, Delaware 10299</ion-label
+      >
+
+      <div class="rating">
+        <ion-icon name="star" color="warning"></ion-icon>
+        <ion-icon name="star" color="warning"></ion-icon>
+        <ion-icon name="star" color="warning"></ion-icon>
+        <ion-icon name="star" color="warning"></ion-icon>
+        <ion-icon name="star" color="medium"></ion-icon>
+        <ion-label color="medium" class="rat_lbl">(76 reviews)</ion-label>
+      </div>
+
+      <div class="details">
+        <ion-row>
+          <ion-col size="3">
+            <ion-icon name="logo-chrome"></ion-icon>
+            <ion-label>Website</ion-label>
+          </ion-col>
+          <ion-col size="3" (click)="goToCall()">
+            <ion-icon name="call-outline"></ion-icon>
+            <ion-label>Call</ion-label>
+          </ion-col>
+          <ion-col size="3">
+            <ion-icon name="location-outline"></ion-icon>
+            <ion-label>Direction</ion-label>
+          </ion-col>
+          <ion-col size="3" (click)="goToShare()">
+            <ion-icon name="repeat-outline"></ion-icon>
+            <ion-label>Share</ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="artist">
+        <ion-label class="head_div">Designers List</ion-label>
+
+        <div class="category_div">
+          <div class="menu">
+            <div
+              class="item"
+              *ngFor="let item of [1,2,3,4,5,6]"
+              (click)="goToSalonSpecialist()"
+            >
+              <img src="assets/images/service.jpg" />
+              <ion-label>Lily</ion-label>
+              <ion-label class="style">Hair stylist</ion-label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="upper_div upper_space">
+      <div>
+        <ion-label class="head_lbl">Daily Completed Status</ion-label>
+      </div>
+
+      <div class="btn">
+        <ion-buttons>
+          <ion-button (click)="goToMapView = !goToMapView">
+            <ion-icon name="map-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-buttons>
+          <ion-button (click)="onClick()">
+            <ion-icon name="options-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+    <div class="segment_div">
+      <ion-segment [(ngModel)]="tabs" mode="ios">
+        <ion-segment-button value="daily">
+          <ion-label>Daily</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="token">
+          <ion-label>Token</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div class="pass" *ngIf="tabs == 'daily'">
+      <div class="schedule" *ngFor="let item of [1,2,3]">
+        <ion-label class="date_lbl">24 September 2021,16:30</ion-label>
+
+        <div class="shop">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+          <div class="shop_detail">
+
+            <ion-label class="spec_lbl">Bella Rinova</ion-label>
+
+            <ion-label class="add_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+            <ion-label class="service_lbl">Services: Regular haircut, Classic shaving</ion-label>
+
+          </div>
+        </div>
+
+        <div class="buttons">
+          <ion-button (click)="onClick()" expand="block" class="btn">
+            Review
+          </ion-button>
+          <ion-button (click)="onClick()" expand="block" class="rebtn">
+            Reschedule
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pass" *ngIf="tabs == 'token'">
+      <div class="schedule" *ngFor="let item of [1,2,3]">
+        <ion-label class="date_lbl">24 September 2021,16:30</ion-label>
+
+        <div class="shop">
+          <div class="bg_image back_image" [style.backgroundImage]="'url(assets/images/salon.webp)'"></div>
+          <div class="shop_detail">
+
+            <ion-label class="spec_lbl">Bella Rinova</ion-label>
+
+            <ion-label class="add_lbl">6391 Elgin St. Celina,Dela...</ion-label>
+
+            <ion-label class="service_lbl">Services: Regular haircut, Classic shaving</ion-label>
+
+          </div>
+        </div>
+
+        <div class="buttons">
+          <ion-button (click)="onClick()" expand="block" class="btn">
+            Review
+          </ion-button>
+          <ion-button (click)="onClick()" expand="block" class="rebtn">
+            Reschedule
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</ion-content> -->
+
+<ion-content class="ion-padding-horizontal">
+  <div class="upper_div upper_space">
+    <div>
+      <ion-label class="head_lbl">Daily Work Report</ion-label>
+    </div>
+
+    <div class="btn">
+      <ion-buttons slot="end">
+        <ion-button (click)="goToNotification()">
+          <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div class="segment_div_upper">
+    <ion-segment [(ngModel)]="tabs" mode="ios">
+      <ion-segment-button value="daily">
+        <ion-label>Daily</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="token">
+        <ion-label>Token</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+           
+
+  <div class="active" *ngIf="tabs === 'daily'">
+    <div class="artist">
+      <!-- <ion-label class="head_div">Designers List</ion-label> -->
+  
+      <div class="category_div">
+        <div class="menu">
+          <div
+            class="item"
+            *ngFor="let item of [1,2,3,4,5,6]"
+            (click)="goToSalonSpecialist()"
+          >
+            <img src="assets/images/service.jpg" />
+            <ion-label>Lily</ion-label>
+            <!-- <ion-label class="style">Hair stylist</ion-label> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content" *ngFor="let item of [1,2,3,4,5,6]">
+      <div class="main_con" (click)="goToDailydetails()">
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+        ></div>
+        <div class="left">
+          <ion-label class="name_lbl">Angela Young</ion-label>
+          <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+        </div>
+      </div>
+      <div class="icon_con">
+        <div class="right">
+          <div class="check">
+            <ion-icon
+              name="trash-outline"
+              slot="end"
+              color="dark"
+              (click)="goToTokenDelete()"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="active" *ngIf="tabs === 'token'">
+    <!-- <div class="segment_div">
+      <div class="category_div">
+        <div class="menu">
+          <ion-segment [(ngModel)]="tokenTabs" mode="ios">
+            <ion-segment-button value="all">
+              <ion-label>All</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="pending">
+              <ion-label>Pending</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="processing">
+              <ion-label>Processing</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="completed">
+              <ion-label>Completed</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="ces">
+              <ion-label>CES</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="urgent">
+              <ion-label>Urgent</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="active" *ngIf="tokenTabs === 'all'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="goToTokenDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'pending'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="onClientDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'processing'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="onClientDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'completed'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="onClientDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

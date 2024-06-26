@@ -1,0 +1,29 @@
+<ion-content class="ion-padding-horizontal">
+  <div class="main_content_div upper_space">
+    <div class="upper_div">
+      <div>
+        <ion-label class="head_lbl">Monthly Work Report</ion-label>
+      </div>
+
+      <div class="btn">
+        <ion-buttons slot="end">
+          <ion-button (click)="goToNotification()">
+            <ion-icon name="notifications-outline" color="dark"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+      </div>
+    </div>
+
+    <div class="services">
+      <div class="category_div">
+        <div class="menu">
+          <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
+            <img src="assets/images/service.jpg" />
+            <ion-label>Haircuts</ion-label>
+            <ion-label>Haircuts</ion-label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

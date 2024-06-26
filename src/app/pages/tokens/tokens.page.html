@@ -1,0 +1,191 @@
+<!-- your-component.html -->
+<ion-content class="ion-padding-horizontal">
+  <div class="upper_div upper_space">
+    <div>
+      <ion-label class="head_lbl">Tokens</ion-label>
+    </div>
+
+    <div class="btn">
+      <ion-buttons slot="end">
+        <ion-button (click)="goToNotification()">
+          <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div class="segment_div_upper">
+    <ion-segment [(ngModel)]="tabs" mode="ios">
+      <ion-segment-button value="daily">
+        <ion-label>Daily</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="token">
+        <ion-label>Token</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="active" *ngIf="tabs === 'daily'">
+    <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+      <div class="main_con" (click)="goToTokendetails()">
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+        ></div>
+        <div class="left">
+          <ion-label class="name_lbl">Angela Young</ion-label>
+          <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+        </div>
+      </div>
+      <div class="icon_con">
+        <div class="right">
+          <div class="check">
+            <ion-icon
+              name="trash-outline"
+              slot="end"
+              color="dark"
+              (click)="goToTokenDelete()"
+            ></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="active" *ngIf="tabs === 'token'">
+    <div class="segment_div">
+      <div class="category_div">
+        <div class="menu">
+          <ion-segment [(ngModel)]="tokenTabs" mode="ios">
+            <ion-segment-button value="all">
+              <ion-label>All</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="pending">
+              <ion-label>Pending</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="processing">
+              <ion-label>Processing</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="completed">
+              <ion-label>Completed</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="ces">
+              <ion-label>CES</ion-label>
+            </ion-segment-button>
+            <ion-segment-button value="urgent">
+              <ion-label>Urgent</ion-label>
+            </ion-segment-button>
+          </ion-segment>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'all'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="goToTokenDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'pending'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="onClientDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'processing'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="onClientDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="active" *ngIf="tokenTabs === 'completed'">
+      <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+        <div class="main_con" (click)="goToTokendetails()">
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+          ></div>
+          <div class="left">
+            <ion-label class="name_lbl">Angela Young</ion-label>
+            <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+          </div>
+        </div>
+        <div class="icon_con">
+          <div class="right">
+            <div class="check">
+              <ion-icon
+                name="trash-outline"
+                slot="end"
+                color="dark"
+                (click)="onClientDelete()"
+              ></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

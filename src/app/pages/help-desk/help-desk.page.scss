@@ -1,0 +1,124 @@
+ion-content {
+    .upper_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .head_lbl {
+            font-size: 20px;
+            font-family: "bold";
+        }
+
+        .btn {
+            display: flex;
+
+            ion-buttons {
+                margin-right: 10px;
+
+                ion-button {
+                    border: 1px solid lightgrey;
+                    border-radius: 10px;
+
+                    ion-icon {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .btn_ticket {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 10px;
+        padding-right: 3%;
+        height: 30px;
+
+        .ticket {
+            width: 100px;
+            text-align: center;
+            color: white;
+            border-radius: 5px;
+            padding-top: 5px;
+        }
+    }
+
+    .segment_div {
+
+        ion-segment {
+            background: transparent;
+
+            ion-segment-button {
+                padding: 8px 0px;
+                --border-radius: 30px;
+                --indicator-color: #000 !important;
+                --indicator-box-shadow: transparent !important;
+                --color-checked: white;
+                --background: #ffff;
+                margin: 10px 0;
+            }
+        }
+    }
+
+    .active {
+        margin-top: 5px;
+
+        .content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+
+            .bg_image {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: relative;
+            }
+
+            .left {
+                margin-left: 15px;
+                display: flex;
+                flex-direction: column;
+
+                .name_lbl {
+                    font-family: "semi-bold";
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+
+                .msg_lbl {
+                    font-size: 13px;
+                    color: #c2c2cb;
+                }
+            }
+
+            .right {
+                margin-left: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .time_lbl {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+
+                .circle {
+                    background: #eb445a;
+                    border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    color: #fff;
+                    display: inline-block;
+                    font-weight: bold;
+                    line-height: 20px;
+                    margin-right: 5px;
+                    text-align: center;
+                    width: 25px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

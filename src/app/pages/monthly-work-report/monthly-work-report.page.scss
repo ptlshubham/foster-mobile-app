@@ -1,0 +1,150 @@
+.main_content_div {
+    width: 100%;
+
+    .upper_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .head_lbl {
+            font-size: 20px;
+            font-family: "bold";
+        }
+
+        .btn {
+            display: flex;
+
+            ion-buttons {
+                margin-right: 10px;
+
+                ion-button {
+                    border: 1px solid lightgrey;
+                    border-radius: 10px;
+
+                    ion-icon {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        .flex_div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .start {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .end {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .category_div {
+        overflow: hidden;
+        margin: 10px 0;
+
+        .menu {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .item {
+                border-radius: 50%;
+                background: transparent !important;
+                display: flex;
+                flex: 0 1 calc(25%);
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                background: #f4f5f8;
+                padding: 10px 0px;
+
+                img {
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 20px;
+                    padding: 0 10px;
+                }
+
+                ion-label {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+// .main_content_div {
+//     width: 100%;
+//     padding-top: 40px;
+
+
+//     .services {
+//         .flex_div {
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             margin-top: 32px;
+
+//             .start {
+//                 font-size: 20px;
+//                 font-weight: 600;
+//             }
+
+//             .end {
+//                 font-size: 14px;
+//                 font-weight: 400;
+//             }
+//         }
+//     }
+
+//     .category_div {
+//         overflow: hidden;
+//         /* Prevent unnecessary scroll */
+//         margin: 10px 0;
+
+//         .menu {
+//             display: flex;
+//             flex-wrap: wrap;
+//             /* Allow items to wrap to the next line */
+//             gap: 10px;
+//             /* Add some space between items */
+//         }
+
+//         .item {
+//             flex: 0 1 calc(25% - 10px);
+//             /* Ensure four items per row with gap taken into account */
+//             box-sizing: border-box;
+//             border-radius: 50%;
+//             background: #f4f5f8;
+//             display: flex;
+//             flex-direction: column;
+//             align-items: center;
+//             text-align: center;
+//             margin: 0 5px;
+
+//             img {
+//                 height: 90px;
+//                 width: 90px;
+//                 border-radius: 20px;
+//                 padding: 0 10px;
+//             }
+
+//             ion-label {
+//                 font-size: 14px;
+//                 margin-top: 10px;
+//             }
+//         }
+//     }
+// }

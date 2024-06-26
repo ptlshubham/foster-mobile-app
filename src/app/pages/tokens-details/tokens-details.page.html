@@ -1,0 +1,57 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <div>
+      <img class="bg_image" src="assets/images/profile.webp" alt="profile" />
+    </div>
+    <div class="btn">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="custom-col1 open_lbl1">Priority</ion-col>
+          <ion-col class="custom-col1 text_lbl">High</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-col1 open_lbl1">Due Date</ion-col>
+          <ion-col class="custom-col1 text_lbl">11/11/1111</ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+  <div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4" class="open_lbl1">Task Id</ion-col>
+        <ion-col class="text_lbl">#230</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4" class="open_lbl1">Description</ion-col>
+        <ion-col class="text_lbl"
+          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
+          fugiat, eius nisi officia commodi quidem expedita repudiandae odio
+          accusamus exercitationem voluptates porro! Voluptatum officia sequi,
+          quasi consequuntur, quae quisquam veritatis accusantium debitis
+          quibusdam tenetur labore, saepe qui incidunt. Incidunt, nulla nostrum
+          ratione inventore obcaecati accusamus dolorem deserunt non vero
+          dignissimos.</ion-col
+        >
+      </ion-row>
+      <ion-row>
+        <ion-col size="4" class="open_lbl1">Assigned To</ion-col>
+        <ion-col class="text_lbl">Developer/Designer</ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="4" class="open_lbl1">Status</ion-col>
+        <ion-col class="text_lbl">Pending</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

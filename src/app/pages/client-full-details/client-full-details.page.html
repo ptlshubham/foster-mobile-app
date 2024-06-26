@@ -1,0 +1,58 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title color="dark">Client Full Details</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <div>
+      <img class="bg_image" src="assets/images/profile.webp" alt="profile" />
+    </div>
+    <div class="btn">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="custom-col1 open_lbl1"></ion-col>
+          <ion-col class="custom-col1 text_lbl"></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="custom-col1 open_lbl1"></ion-col>
+          <ion-col class="custom-col1 text_lbl"></ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input placeholder="Shiv Dugdhalay"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Business Type</ion-label>
+    <ion-input placeholder="Ice Cream"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Manager Name</ion-label>
+    <ion-input placeholder="Divyangi Soni"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Designer Name</ion-label>
+    <ion-input
+      placeholder="Vishal Prajapati, Dhairya Patel, Daksh Patel"
+    ></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div (click)="dismiss()" class="system_button" expand="block"> Edit </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,113 @@
+<ion-content class="ion-padding-horizontal">
+  <div class="upper_div upper_space">
+    <div>
+      <ion-label class="head_lbl">CES Design Token</ion-label>
+    </div>
+
+    <div class="btn">
+      <ion-buttons slot="end">
+        <ion-button (click)="goToNotification()">
+          <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div class="segment_div">
+    <div class="category_div">
+      <div class="menu">
+        <ion-segment [(ngModel)]="tabs" mode="ios">
+          <ion-segment-button value="all">
+            <ion-label>All</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="pending">
+            <ion-label>Pending</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="completed">
+            <ion-label>Completed</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+    </div>
+  </div>
+
+  <div class="active" *ngIf="tabs == 'all'">
+    <div
+      class="content"
+      *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]"
+      (click)="goToMessage()"
+    >
+      <div
+        class="bg_image"
+        [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+      ></div>
+      <div class="left">
+        <ion-label class="name_lbl">Angela Young</ion-label>
+        <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+      </div>
+      <div class="right" slot="end">
+        <ion-label class="time_lbl">10:30</ion-label>
+        <div class="circle">10</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="active" *ngIf="tabs == 'pending'">
+    <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+      <div
+        class="bg_image"
+        [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+      >
+        <div class="online"></div>
+      </div>
+      <div class="left">
+        <ion-label class="name_lbl">Angela Young</ion-label>
+        <ion-label class="msg_lbl">Hello, How can i help you</ion-label>
+      </div>
+      <div class="right" slot="end">
+        <ion-label class="time_lbl">10:30</ion-label>
+        <div class="circle">10</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group" *ngIf="tabs == 'processing'">
+    <div class="content" *ngFor="let item of [1,2,3,4,5]">
+      <div class="first_div">
+        <ion-label class="name_lbl">The Galleria Hair Salon</ion-label>
+        <ion-icon name="ellipsis-horizontal" color="medium"></ion-icon>
+      </div>
+      <div class="second_div">
+        <div class="circle">10</div>
+        <ion-label class="text_lbl"
+          >Which kind of package and offers provided ?</ion-label
+        >
+      </div>
+      <div class="last_div">
+        <div class="time">
+          <ion-label class="time_lbl">5 min ago</ion-label>
+        </div>
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+        ></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calls" *ngIf="tabs == 'completed'">
+    <div class="content" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+      <div
+        class="bg_image"
+        [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+      ></div>
+      <div class="left">
+        <ion-label class="name_lbl">Angela Young</ion-label>
+        <ion-label class="msg_lbl">Yesterday,8:43 PM</ion-label>
+      </div>
+      <div class="right">
+        <ion-icon name="videocam" color="secondary"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>

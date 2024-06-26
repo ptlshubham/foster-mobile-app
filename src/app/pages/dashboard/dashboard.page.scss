@@ -1,0 +1,223 @@
+.main_content_div {
+    width: 100%;
+
+    .upper_div {
+        ion-item {
+            --padding-start: 0;
+
+            ion-thumbnail {
+                height: 36px;
+                width: 36px;
+
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            ion-buttons {
+                ion-button {
+                    border: 1px solid lightgrey;
+                    border-radius: 10px;
+
+                    ion-icon {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .name_div {
+        .name_lbl {
+            margin-top: 20px;
+            font-size: 22px;
+            font-family: "bold";
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+
+            ion-label {
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .search_bar {
+        margin-top: 20px;
+
+        ion-item {
+            --background: #f4f5f8;
+            --border-radius: 10px;
+
+            ion-input {
+                margin: 10px 0;
+            }
+
+            ion-icon {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .appoinment {
+        .flex_div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 32px;
+
+            .start {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .end {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        ion-item {
+            margin-top: 1rem;
+            --background: var(--ion-color-primary);
+            border-radius: 10px;
+
+            ion-icon {
+                font-size: 20px;
+            }
+
+            ion-label {
+                font-size: 14px;
+                color: white;
+                padding: 10px 0;
+            }
+        }
+    }
+
+    .services {
+        .flex_div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 32px;
+
+            .start {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .end {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+
+    .category_div {
+        overflow: scroll;
+        margin: 10px 0;
+
+        .menu {
+            width: max-content;
+            display: flex;
+            flex-direction: row;
+
+            .item {
+                border-radius: 50%;
+                background: transparent !important;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                background: #f4f5f8;
+                margin: 0 5px;
+
+                img {
+                    height: 90px;
+                    width: 90px;
+                    border-radius: 20px;
+                    padding: 0 10px;
+                }
+
+                ion-label {
+                    font-size: 14px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .artist {
+        margin-top: 1rem;
+
+        .head_div {
+            font-size: 18px;
+            font-family: "semi-bold";
+            margin-bottom: 20px;
+        }
+
+        .category_div {
+            overflow: scroll;
+            margin: 10px 0;
+
+            .menu {
+                // width: max-content;
+                display: flex;
+                flex-direction: row;
+
+                .selected {
+                    // border: 2px solid #6D5AE7;
+                    border-radius: 15px;
+                }
+
+                .item {
+                    background: transparent !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    background: #f4f5f8;
+                    margin: 0 5px;
+                    padding: 5px;
+
+                    .bg_image {
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 15px;
+                    }
+
+                    ion-label {
+                        font-size: 14px;
+                        margin-top: 10px;
+                    }
+                    .style {
+                        font-size: 12px;
+                        color: #c2c2cb;
+                    }
+                }
+            }
+        }
+    }
+
+    .find_salon {
+        .flex_div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 32px;
+
+            .start {
+                font-size: 20px;
+                font-weight: 600;
+            }
+
+            .end {
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}

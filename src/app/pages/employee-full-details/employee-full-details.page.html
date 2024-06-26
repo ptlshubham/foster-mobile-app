@@ -1,0 +1,46 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="title">
+    <img class="bg_image" src="assets/images/profile.webp" alt="profile" />
+  </div>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Name</ion-label>
+    <ion-input placeholder="Divyangi Soni"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Role</ion-label>
+    <ion-input placeholder="Manager"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Contact</ion-label>
+    <ion-input placeholder="7016687284"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Email</ion-label>
+    <ion-input placeholder="divyangisoni08@gmail.com"></ion-input>
+  </ion-item>
+
+  <ion-item lines="none">
+    <ion-label position="stacked">Birthday</ion-label>
+    <ion-input placeholder="16/07/1998"></ion-input>
+  </ion-item>
+</ion-content>
+
+<ion-footer class="ion-no-border system_color">
+  <ion-toolbar>
+    <div (click)="dismiss()" class="system_button" expand="block"> Edit </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,122 @@
+<ion-split-pane contentId="main">
+  <!--  the side menu  -->
+  <ion-menu contentId="main">
+    <ion-content class="ion-padding-horizontal">
+      <div class="title">
+        <div
+          class="bg_image"
+          [style.backgroundImage]="'url(assets/images/profile.webp)'"
+        ></div>
+        <div class="btn">
+          <ion-buttons>
+            <ion-button (click)="goToNotification()">
+              <ion-icon name="notifications-outline" color="dark"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+        </div>
+      </div>
+      <ion-menu-toggle>
+        <div class="name">
+          <ion-label>Robert Fox</ion-label>
+          <ion-icon
+            slot="end"
+            name="create-outline"
+            color="primary"
+            (click)="goToEditProfile()"
+          ></ion-icon>
+        </div>
+        <ion-label class="mail">robert_fox@gmail.com</ion-label>
+
+        <div class="content">
+          <ion-item lines="none" (click)="goToDashboard()">
+            <ion-icon slot="start" name="card-outline" color="dark"></ion-icon>
+            <ion-label>Dashboard</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToEmployeeList()">
+            <ion-icon
+              slot="start"
+              name="refresh-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Employee List</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToClientList()">
+            <ion-icon
+              slot="start"
+              name="lock-closed-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Client List</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToTokens()">
+            <ion-icon
+              slot="start"
+              name="people-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Tokens</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToCESDesignToken()">
+            <ion-icon
+              slot="start"
+              name="help-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>CES Design Token</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToTodoList()">
+            <ion-icon
+              slot="start"
+              name="help-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Todo-List</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToMonthlyWorkReport()">
+            <ion-icon
+              slot="start"
+              name="help-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Monthly Work Report</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToDailyWorkReport()">
+            <ion-icon
+              slot="start"
+              name="help-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Daily Work Report</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="goToHelpDesk()">
+            <ion-icon
+              slot="start"
+              name="help-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Help Desk</ion-label>
+          </ion-item>
+
+          <ion-item lines="none" (click)="logout()">
+            <ion-icon
+              slot="start"
+              name="close-circle-outline"
+              color="dark"
+            ></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </div>
+      </ion-menu-toggle>
+    </ion-content>
+  </ion-menu>
+  <!-- the main content -->
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-split-pane>

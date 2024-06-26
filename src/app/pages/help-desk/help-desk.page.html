@@ -1,0 +1,64 @@
+<ion-content class="ion-padding-horizontal">
+  <div class="upper_div upper_space">
+    <div>
+      <ion-label class="head_lbl">Help Desk</ion-label>
+    </div>
+
+    <div class="btn">
+      <ion-buttons slot="end">
+        <ion-button (click)="goToNotification()">
+          <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div class="btn_ticket">
+    <div
+      class="ticket system_button"
+      slot="end"
+      value="date"
+      (click)="goToNewTicket()"
+    >
+      <ion-label>New Ticket</ion-label>
+    </div>
+  </div>
+
+  <div class="segment_div">
+    <ion-segment [(ngModel)]="tabs" mode="ios">
+      <ion-segment-button value="message">
+        <ion-label>All</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="active">
+        <ion-label>Pending</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="group">
+        <ion-label>Processing</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="calls">
+        <ion-label>Completed</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+
+  <div class="active" *ngIf="tabs == 'message'">
+    <div
+      class="content"
+      *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]"
+      (click)="handlehelp()"
+    >
+      <div
+        class="bg_image"
+        [style.backgroundImage]="'url(assets/images/g1.jpg)'"
+      ></div>
+      <div class="left">
+        <ion-label class="name_lbl">Divyangi Soni </ion-label>
+        <ion-label class="msg_lbl">Manager</ion-label>
+      </div>
+      <!-- <div class="right" slot="end">
+        <ion-label class="time_lbl">10:30</ion-label>
+        <div class="circle">10</div>
+      </div> -->
+    </div>
+  </div>
+</ion-content>

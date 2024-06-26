@@ -1,0 +1,115 @@
+ion-content {
+    .upper_div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .head_lbl {
+            font-size: 20px;
+            font-family: "bold";
+        }
+
+        .btn {
+            display: flex;
+
+            ion-buttons {
+                margin-right: 10px;
+
+                ion-button {
+                    border: 1px solid lightgrey;
+                    border-radius: 10px;
+
+                    ion-icon {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+
+    .active {
+        margin-top: 24px;
+
+        .content {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+
+            .bg_image {
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                position: relative;
+
+                .online {
+                    position: absolute;
+                    height: 12px;
+                    width: 12px;
+                    background: green;
+                    border: 2px solid #fff;
+                    border-radius: 50%;
+                    bottom: 8px;
+                    right: -5px;
+                }
+            }
+
+            .left {
+                margin-left: 10px;
+
+                .name_lbl {
+                    font-family: "semi-bold";
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
+
+                .msg_lbl {
+                    font-size: 13px;
+                    color: #c2c2cb;
+                }
+            }
+
+            .right {
+                margin-left: auto;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+                .close {
+                    border-radius: 50%;
+                    margin-right: 15px;
+                }
+
+                .check {
+                    border-radius: 50%;
+                    padding: 3px;
+
+                    ion-icon {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                .time_lbl {
+                    font-size: 13px;
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+
+                .circle {
+                    background: #eb445a;
+                    border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    color: #fff;
+                    display: inline-block;
+                    font-weight: bold;
+                    line-height: 20px;
+                    margin-right: 5px;
+                    text-align: center;
+                    width: 25px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}

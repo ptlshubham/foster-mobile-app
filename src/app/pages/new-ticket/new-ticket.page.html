@@ -1,0 +1,53 @@
+<ion-header mode="md" class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="start" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-buttons slot="end">
+    <ion-button (click)="dismiss()">
+      <ion-icon name="close"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+
+  <div class="fill">
+    <ion-item lines="none">
+      <ion-label position="stacked">Title</ion-label>
+      <ion-input placeholder="Shiv Dugdhalay"></ion-input>
+    </ion-item>
+    <ion-row class="gender">
+      <!-- <ion-col size="6"> -->
+      <ion-item lines="none">
+        <ion-label position="stacked">Select Employee</ion-label>
+        <ion-select value="male" placeholder="Select Employee">
+          <ion-select-option>Divyangi Soni</ion-select-option>
+          <ion-select-option>Harshil Amin</ion-select-option>
+          <ion-select-option>Kishan Panchal</ion-select-option>
+          <ion-select-option>Kajal Agrawal</ion-select-option>
+          <ion-select-option>Patel Shubham</ion-select-option>
+          <ion-select-option>Shailesh Parmar</ion-select-option>
+          <ion-select-option>Het Patel</ion-select-option>
+          <ion-select-option>Yaksh Patel</ion-select-option>
+          <ion-select-option>Mahir Rana</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <!-- </ion-col> -->
+    </ion-row>
+
+    <ion-item lines="none">
+      <ion-label position="stacked">Description</ion-label>
+      <ion-textarea
+        placeholder="Write here..."
+        rows="10"
+        class="border"
+      ></ion-textarea>
+    </ion-item>
+  </div>
+
+  <div class="system_button" (click)="dismiss()" expand="block">Submit</div>
+</ion-content>
