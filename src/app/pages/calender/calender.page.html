@@ -1,13 +1,5 @@
-<!--
-  Authors : bunchdevelopers (Rahul Jograna)
-  Website : https://bunchdevelopers.com/
-  App Name : ionic6Template Pack
-  This App Template Source code is licensed as per the
-  terms found in the Website https://bunchdevelopers.com/license
-  Copyright and Good Faith Purchasers © 2021-present bunchdevelopers.
- -->
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar background="#0A8F9C">
     <ion-segment [(ngModel)]="current" mode="md">
       <ion-segment-button [value]="1">
         <ion-label>Ongoing</ion-label>
@@ -69,39 +61,53 @@
     </ng-template>
 
     <div *ngFor="let item of bookings" class="bookings">
-      <ion-row style="padding-bottom: 10px; border-bottom: 1px solid lightgray">
-        <ion-col size="4">
+      <ion-row style="padding-bottom: 7px">
+        <!-- <ion-col size="4">
           <div
             class="user_image"
             [ngStyle]="{'background-image':'url(assets/imgs/sliders/3.jpg)'}"
           ></div>
-        </ion-col>
-        <ion-col size="8">
+        </ion-col> -->
+        <ion-col size="9">
           <ion-label class="salon-name"
-            >Mint Salon Drive-in UniSex Famous</ion-label
+            >Post</ion-label
           >
           <ion-label class="salon-address">
-            <ion-icon slot="end" name="location"></ion-icon> Akshya Nagar 1st
-            Block 1st Cross, Rammurthy nagar, Bangalore-560016
+            <ion-icon slot="end" name="document-text"></ion-icon>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </ion-label>
         </ion-col>
       </ion-row>
-      <ion-row style="padding: 10px; border-bottom: 1px solid lightgray">
+      <ion-row style=" border-bottom: 1px solid lightgray">
         <ion-col size="6">
-          <ion-label class="salon-name">Men's Haircuts</ion-label>
+          <ion-label class="salon-name">Men's Haircuts</ion-label> 
           <ion-label class="salon-address">
-            <ion-icon slot="end" name="person"></ion-icon> Lisa T. Plum
+            <ion-icon slot="end" name="person"></ion-icon>Vishal Prajapati
           </ion-label>
-        </ion-col>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon>Yaksh Patel
+          </ion-label>
+          <ion-label class="salon-address">
+            <ion-icon slot="end" name="person"></ion-icon>Dhairya Patel
+          </ion-label>
+        </ion-col>  
         <ion-col size="6">
-          <ion-label class="date-time">December 26, 2021</ion-label>
-          <ion-label class="date-time">01:30 - 02:30 PM</ion-label>
+          <ion-label class="date-time">
+            <ion-icon slot="end" name="person"></ion-icon>
+            Vishal Prajapati</ion-label>
+           <ion-label class="date-time">
+            <ion-icon slot="end" name="person"></ion-icon>
+            Dhairya Patel</ion-label>
+            <ion-label class="date-time">
+              <ion-icon slot="end" name="person"></ion-icon>
+              Yaksh Patel</ion-label>
+          
         </ion-col>
       </ion-row>
     </div>
   </div>
 
-  <div *ngIf="current == 2">
+  <!-- <div *ngIf="current == 2">
     <div *ngFor="let item of [1,2,3,4,5,6,7,8]" class="bookings">
       <ion-row style="padding-bottom: 10px; border-bottom: 1px solid lightgray">
         <ion-col size="4">
@@ -112,7 +118,7 @@
         </ion-col>
         <ion-col size="8">
           <ion-label class="salon-name"
-            >Mint Salon Drive-in UniSex Famous</ion-label
+            >Post</ion-label
           >
           <ion-label class="salon-address">
             <ion-icon slot="end" name="location"></ion-icon> Akshya Nagar 1st
@@ -143,5 +149,5 @@
         </ion-col>
       </ion-row>
     </div>
-  </div>
+  </div> -->
 </ion-content>
