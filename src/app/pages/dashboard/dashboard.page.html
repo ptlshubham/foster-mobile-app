@@ -1,51 +1,46 @@
 <ion-content class="ion-padding-horizontal">
-  <div class="main_content_div upper_space">
-    <div class="upper_div">
-      <ion-item lines="none">
-        <ion-thumbnail (click)="util.menuOpen()">
-          <img src="assets/images/profile.webp" />
-        </ion-thumbnail>
-        <ion-buttons slot="end">
-          <ion-button (click)="goToNotification()">
-            <ion-icon name="notifications-outline" color="dark"></ion-icon>
-          </ion-button>
-        </ion-buttons>
-      </ion-item>
-    </div>
-
-    <div class="name_div">
-      <ion-label class="name_lbl">Hi, Jenny Wilson</ion-label>
-      <h4></h4>
-      <div class="location">
-        <ion-icon slot="start" name="location-outline"></ion-icon>
-        <ion-label (click)="goToEnableLocation()"
-          >6391 Elgin St. Celina, Delaware 10299</ion-label
-        >
+  <div class="upper_div">
+    <div class="ion_item">
+      <ion-thumbnail (click)="util.menuOpen()">
+        <img src="assets/images/profile.webp" />
+      </ion-thumbnail>
+      <div class="user_name">
+        <ion-label class="name_lbl">Jenny Wilson</ion-label>
+        <ion-label>Role</ion-label>
       </div>
     </div>
 
-    <div class="search_bar">
-      <ion-item lines="none">
-        <ion-icon slot="start" name="search-outline"></ion-icon>
-        <ion-input type="text" placeholder="Search by salons"></ion-input>
-        <ion-icon slot="end" name="options-outline"></ion-icon>
-      </ion-item>
+    <div class="btn">
+      <ion-buttons slot="end">
+        <ion-button (click)="goToNotification()">
+          <ion-icon name="notifications-outline" color="dark"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </div>
+
+  <div class="search_bar">
+    <ion-item lines="none">
+      <ion-icon slot="start" name="search-outline"></ion-icon>
+      <ion-input type="text" placeholder="Search by salons"></ion-input>
+      <ion-icon slot="end" name="options-outline"></ion-icon>
+    </ion-item>
+  </div>
+
+  <div class="appoinment">
+    <div class="flex_div">
+      <ion-label class="start">Appointment</ion-label>
+      <ion-label class="end">Today, Morning</ion-label>
     </div>
 
-    <div class="appoinment">
-      <div class="flex_div">
-        <ion-label class="start">Appointment</ion-label>
-        <ion-label class="end">Today, Morning</ion-label>
-      </div>
+    <ion-item lines="none">
+      <ion-icon slot="start" name="calendar" color="light"></ion-icon>
+      <ion-label>At The Galleria Hair Salon</ion-label>
+      <ion-label slot="end">09:00 AM</ion-label>
+    </ion-item>
+  </div>
 
-      <ion-item lines="none">
-        <ion-icon slot="start" name="calendar" color="light"></ion-icon>
-        <ion-label>At The Galleria Hair Salon</ion-label>
-        <ion-label slot="end">09:00 AM</ion-label>
-      </ion-item>
-    </div>
-
-    <!-- <div class="services">
+  <!-- <div class="services">
       <div class="category_div">
         <div class="menu">
           <div class="voucher" *ngFor="let item of modules">
@@ -65,67 +60,89 @@
       </div>
     </div> -->
 
-    <div class="artist">
-      <ion-label class="head_div"></ion-label>
-
-      <div class="category_div">
-        <div class="menu">
-          <div
-            class="item selected"
-            *ngFor="let item of [1,2,3,4,5,6,7,8]"
-            (click)="goToSalonSpecialist()"
-          >
-            <div
-              class="bg_image"
-              [style.backgroundImage]="'url(assets/images/service.jpg)'"
-            ></div>
+  <div class="artist">
+    <ion-label class="head_div"></ion-label>
+    <div class="category_div">
+      <div class="menu">
+        <div
+          class="item"
+          *ngFor="let item of [1,2,3]"
+          (click)="goToSalonSpecialist()"
+        >
+          <div class="label_container">
             <ion-label>Employee List</ion-label>
             <ion-label class="style">18</ion-label>
           </div>
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/service.jpg)'"
+          ></div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="services">
-      <div class="flex_div">
-        <ion-label class="start">Clients</ion-label>
-        <ion-label class="end">View All</ion-label>
-      </div>
-
-      <div class="category_div">
-        <div class="menu">
-          <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
-            <img src="assets/images/service.jpg" />
-            <ion-label>Haircuts</ion-label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="find_salon">
-      <div class="flex_div">
-        <ion-label class="start">Todo List</ion-label>
-        <ion-label class="end">View All</ion-label>
-      </div>
-
-      <div
-        class="shop"
-        *ngFor="let item of [1,2,3,4,5]"
-        (click)="goToSalonDetail()"
-      >
+  <div class="artist">
+    <ion-label class="head_div"></ion-label>
+    <div class="category_div">
+      <div class="menu">
         <div
-          class="bg_image back_image"
-          [style.backgroundImage]="'url(assets/images/salon.webp)'"
-        ></div>
-        <div class="shop_detail">
-          <ion-label class="name">Name</ion-label>
+          class="item"
+          *ngFor="let item of [1,2,3]"
+          (click)="goToSalonSpecialist()"
+        >
+          <div class="label_container">
+            <ion-label>Employee List</ion-label>
+            <ion-label class="style">18</ion-label>
+          </div>
+          <div
+            class="bg_image"
+            [style.backgroundImage]="'url(assets/images/service.jpg)'"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-          <ion-label class="sub_lbl">How can I help you ?</ion-label>
+  <div class="services">
+    <div class="flex_div">
+      <ion-label class="start">Clients</ion-label>
+      <ion-label class="end">View All</ion-label>
+    </div>
 
-          <div class="rate">
-            <div>
-              <ion-label class="dis_lbl">Date</ion-label>
-            </div>
+    <div class="category_div">
+      <div class="menu">
+        <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
+          <img src="assets/images/service.jpg" />
+          <ion-label>Haircuts</ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="find_salon">
+    <div class="flex_div">
+      <ion-label class="start">Todo List</ion-label>
+      <ion-label class="end">View All</ion-label>
+    </div>
+
+    <div
+      class="shop"
+      *ngFor="let item of [1,2,3,4,5]"
+      (click)="goToSalonDetail()"
+    >
+      <div
+        class="bg_image back_image"
+        [style.backgroundImage]="'url(assets/images/salon.webp)'"
+      ></div>
+      <div class="shop_detail">
+        <ion-label class="name">Name</ion-label>
+
+        <ion-label class="sub_lbl">How can I help you ?</ion-label>
+
+        <div class="rate">
+          <div>
+            <ion-label class="dis_lbl">Date</ion-label>
           </div>
         </div>
       </div>

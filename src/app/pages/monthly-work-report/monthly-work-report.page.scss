@@ -29,6 +29,90 @@
         }
     }
 
+    .custom-card {
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+        ion-card-content {
+            .card-content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+
+                .text-content {
+                    margin-bottom: 10px;
+
+                    h2 {
+                        font-size: 1.2em;
+                        margin: 0;
+                    }
+
+                    p {
+                        color: #888;
+                        margin: 0;
+                    }
+                }
+
+                .stats-content {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    width: 100%;
+
+                    .stat {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        margin-left: 10px;
+
+                        p {
+                            margin: 0;
+                            font-size: 0.9em;
+                            color: #888;
+                        }
+
+                        .stat-value {
+                            // background-color: #6c63ff;
+                            color: white;
+                            border-radius: 5px;
+                            padding: 5px 10px;
+                            margin-top: 5px;
+                            width: 50px;
+                            height: 30px;
+
+                            .progress-container {
+                                position: relative;
+                                width: 100%;
+                            }
+
+                            .progress-container ion-progress-bar {
+                                width: 50px;
+                                height: 30px;
+                                border-radius: 10px;
+                            }
+
+                            .progress-label {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                color: #fff;
+                                font-weight: bold;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    .gradient-90 {
+                        background: linear-gradient(to right, #24afa4, #7fbcd0);
+                        /* Dark blue to light blue */
+                    }
+                }
+            }
+        }
+    }
+
     .services {
         .flex_div {
             display: flex;
@@ -83,68 +167,3 @@
         }
     }
 }
-
-
-// .main_content_div {
-//     width: 100%;
-//     padding-top: 40px;
-
-
-//     .services {
-//         .flex_div {
-//             display: flex;
-//             align-items: center;
-//             justify-content: space-between;
-//             margin-top: 32px;
-
-//             .start {
-//                 font-size: 20px;
-//                 font-weight: 600;
-//             }
-
-//             .end {
-//                 font-size: 14px;
-//                 font-weight: 400;
-//             }
-//         }
-//     }
-
-//     .category_div {
-//         overflow: hidden;
-//         /* Prevent unnecessary scroll */
-//         margin: 10px 0;
-
-//         .menu {
-//             display: flex;
-//             flex-wrap: wrap;
-//             /* Allow items to wrap to the next line */
-//             gap: 10px;
-//             /* Add some space between items */
-//         }
-
-//         .item {
-//             flex: 0 1 calc(25% - 10px);
-//             /* Ensure four items per row with gap taken into account */
-//             box-sizing: border-box;
-//             border-radius: 50%;
-//             background: #f4f5f8;
-//             display: flex;
-//             flex-direction: column;
-//             align-items: center;
-//             text-align: center;
-//             margin: 0 5px;
-
-//             img {
-//                 height: 90px;
-//                 width: 90px;
-//                 border-radius: 20px;
-//                 padding: 0 10px;
-//             }
-
-//             ion-label {
-//                 font-size: 14px;
-//                 margin-top: 10px;
-//             }
-//         }
-//     }
-// }

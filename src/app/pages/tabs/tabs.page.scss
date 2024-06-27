@@ -1,47 +1,3 @@
-// ion-tabs {
-//   ion-tab-bar {
-//     --border: 0;
-//     width: 100%;
-//     display: flex;
-//     justify-content: space-around;
-//     /* Distribute space evenly around the tab buttons */
-
-//     ion-tab-button {
-//       flex: 1;
-//       /* Make each tab button take equal space */
-//       min-width: 0;
-
-//       /* Ensure tabs don't grow too large */
-//       ion-icon {
-//         font-size: 20px;
-//       }
-//     }
-
-//     ion-tab-button[aria-selected="true"] {
-//       color: var(--ion-color-dark);
-//     }
-//   }
-// }
-
-// /* For screens smaller than 400px */
-// @media (max-width: 400px) {
-//   ion-tabs {
-//     ion-tab-bar {
-//       ion-tab-button {
-//         ion-label {
-//           display: none;
-//           /* Hide the label text on very small screens */
-//         }
-
-//         ion-icon {
-//           font-size: 18px;
-//           /* Adjust the icon size */
-//         }
-//       }
-//     }
-//   }
-// }
-
 ion-tabs {
   ion-tab-bar {
     --border: 0;
@@ -49,34 +5,22 @@ ion-tabs {
     display: flex;
     justify-content: space-around;
 
-    /* Distribute space evenly around the tab buttons */
     ion-tab-button {
       flex: 1;
-      /* Make each tab button take equal space */
-      min-width: 0;
+      width: max-content;
 
-      /* Allow the tab buttons to shrink below their intrinsic width */
       ion-icon {
         font-size: 20px;
+      }
+
+      ion-label {
+        white-space: normal;
+        text-align: center;
       }
     }
 
     ion-tab-button[aria-selected="true"] {
       color: #0e8f99;
-    }
-  }
-}
-
-/* Media query for smaller screens */
-@media (max-width: 400px) {
-  ion-tabs {
-    ion-tab-bar {
-      ion-tab-button {
-        font-size: 12px;
-        /* Reduce font size for smaller screens */
-        padding: 5px;
-        /* Adjust padding for smaller screens */
-      }
     }
   }
 }

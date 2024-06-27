@@ -4,7 +4,6 @@
       <div>
         <ion-label class="head_lbl">Monthly Work Report</ion-label>
       </div>
-
       <div class="btn">
         <ion-buttons slot="end">
           <ion-button (click)="goToNotification()">
@@ -13,17 +12,35 @@
         </ion-buttons>
       </div>
     </div>
-
-    <div class="services">
-      <div class="category_div">
-        <div class="menu">
-          <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
-            <img src="assets/images/service.jpg" />
-            <ion-label>Haircuts</ion-label>
-            <ion-label>Haircuts</ion-label>
+    <ion-card class="custom-card">
+      <ion-card-content>
+        <div class="card-content">
+          <div class="text-content">
+            <h2>Let us plant more trees from this year</h2>
+            <p>89,777 views</p>
+          </div>
+          <div class="stats-content">
+            <div class="stat">
+              <p>Finished</p>
+              <div class="stat-value">
+                <div class="progress-container">
+                  <ion-progress-bar value="0.7"></ion-progress-bar>
+                  <ion-label class="progress-label">40%</ion-label>
+                </div>
+              </div>
+            </div>
+            <div class="stat">
+              <p>New_users</p>
+              <div class="stat-value">
+                <div class="progress-container">
+                  <ion-progress-bar value="0.3"></ion-progress-bar>
+                  <ion-label class="progress-label">40%</ion-label>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </ion-card-content>
+    </ion-card>
   </div>
 </ion-content>

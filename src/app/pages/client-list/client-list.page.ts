@@ -3,6 +3,7 @@ import { ModalController } from "@ionic/angular";
 import { CalenderPage } from "../calender/calender.page";
 import { ClientFullDetailsPage } from "../client-full-details/client-full-details.page";
 import { ClientDeletePage } from "../client-delete/client-delete.page";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-client-list",
@@ -23,7 +24,10 @@ export class ClientListPage implements OnInit {
     },
   ];
 
-  constructor(private modalController: ModalController) {}
+  constructor(
+    private modalController: ModalController,
+    private router: Router
+  ) {}
 
   async onClientDetailsPage() {
     const modal = await this.modalController.create({
@@ -35,14 +39,18 @@ export class ClientListPage implements OnInit {
     await modal.present();
   }
 
-  async onCalenderPage() {
-    const modal = await this.modalController.create({
-      component: CalenderPage,
-      cssClass: "custom_modal_center",
-      componentProps: { value: 123 },
-    });
+  // async onCalenderPage() {
+  //   const modal = await this.modalController.create({
+  //     component: CalenderPage,
+  //     cssClass: "custom_modal_center",
+  //     componentProps: { value: 123 },
+  //   });
 
-    await modal.present();
+  //   await modal.present();
+  // }
+
+  onCalenderPage() {
+    this.router.navigate(["calender"]);
   }
 
   async onClientDelete() {
