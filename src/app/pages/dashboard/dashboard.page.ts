@@ -3,8 +3,8 @@ import { Router } from "@angular/router";
 import { ModalController } from "@ionic/angular";
 import { UtilService } from "src/app/services/util.service";
 import { ClientDashboardTodoListPage } from "../client-dashboard-todo-list/client-dashboard-todo-list.page";
-import { AfterViewInit, ElementRef, ViewChild } from '@angular/core';
-import { Chart } from 'chart.js';
+import { AfterViewInit, ElementRef, ViewChild } from "@angular/core";
+import { Chart } from "chart.js";
 
 @Component({
   selector: "app-dashboard",
@@ -12,6 +12,8 @@ import { Chart } from 'chart.js';
   styleUrls: ["./dashboard.page.scss"],
 })
 export class DashboardPage implements OnInit {
+  chartData: any;
+
   modules = [
     {
       img: "assets/icon/icon-gif/employee.gif",
@@ -119,9 +121,6 @@ export class DashboardPage implements OnInit {
     private router: Router,
     public util: UtilService
   ) {}
-
-
-
 
   ngOnInit() {
     this.calculateTotalPages();
