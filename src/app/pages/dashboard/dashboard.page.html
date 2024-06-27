@@ -1,5 +1,16 @@
-<ion-content class="ion-padding-horizontal">
-  <div class="upper_div">
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>Name</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="upper_div ion-padding-horizontal">
     <div class="ion_item">
       <ion-thumbnail (click)="util.menuOpen()">
         <img src="assets/images/profile.webp" />
@@ -18,137 +29,138 @@
       </ion-buttons>
     </div>
   </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card class="full-height back_card">
+          <ion-card-header>
+            <ion-card-title>Day Chart</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <!-- Insert your chart component here -->
+            <app-charts></app-charts>
+            <div class="chart-placeholder"></div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <div class="search_bar">
-    <ion-item lines="none">
-      <ion-icon slot="start" name="search-outline"></ion-icon>
-      <ion-input type="text" placeholder="Search by salons"></ion-input>
-      <ion-icon slot="end" name="options-outline"></ion-icon>
-    </ion-item>
-  </div>
+      <ion-col size="6">
+        <ion-row>
+          <ion-col size="12">
+            <ion-card class="back_card">
+              <ion-card-content>
+                <div class="stat-box">
+                  <div class="stat-number">10</div>
+                  <div class="stat-label">Employees</div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="12">
+            <ion-card class="full-height back_card">
+              <ion-card-content>
+                <div class="stat-box">
+                  <div class="stat-number">45</div>
+                  <div class="stat-label">Clients</div>
+                  <div class="button-row">
+                    <ion-button size="small" expand="block">Mark</ion-button>
+                    <ion-button size="small" expand="block">Develop</ion-button>
+                  </div>
+                </div>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
 
-  <div class="appoinment">
-    <div class="flex_div">
-      <ion-label class="start">Appointment</ion-label>
-      <ion-label class="end">Today, Morning</ion-label>
-    </div>
-
-    <ion-item lines="none">
-      <ion-icon slot="start" name="calendar" color="light"></ion-icon>
-      <ion-label>At The Galleria Hair Salon</ion-label>
-      <ion-label slot="end">09:00 AM</ion-label>
-    </ion-item>
-  </div>
-
-  <!-- <div class="services">
-      <div class="category_div">
-        <div class="menu">
-          <div class="voucher" *ngFor="let item of modules">
-            <div class="book">
-              <ion-label class="first_lbl">{{item.moduleName}}</ion-label>
-              <ion-label class="sec_lbl">{{item.number}}</ion-label>
-              <ion-button (click)="onClick()" expand="block" class="btn">
-                View More
-              </ion-button>
+    <ion-row>
+      <ion-col size="4">
+        <ion-card class="back_card">
+          <ion-card-content>
+            <div class="stat-box">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Part</div>
             </div>
-            <div
-              class="bg_image back_image"
-              [style.backgroundImage]="'url(assets/images/voucher.webp)'"
-            ></div>
-          </div>
-        </div>
-      </div>
-    </div> -->
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="back_card">
+          <ion-card-content>
+            <div class="stat-box">
+              <div class="stat-number">5</div>
+              <div class="stat-label">Proj</div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="4">
+        <ion-card class="back_card">
+          <ion-card-content>
+            <div class="stat-box">
+              <div class="stat-number">100</div>
+              <div class="stat-label">Comp</div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-  <div class="artist">
-    <ion-label class="head_div"></ion-label>
-    <div class="category_div">
-      <div class="menu">
-        <div
-          class="item"
-          *ngFor="let item of [1,2,3]"
-          (click)="goToSalonSpecialist()"
-        >
-          <div class="label_container">
-            <ion-label>Employee List</ion-label>
-            <ion-label class="style">18</ion-label>
-          </div>
-          <div
-            class="bg_image"
-            [style.backgroundImage]="'url(assets/images/service.jpg)'"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="back_card">
+          <ion-card-content>
+            <!-- Insert your bottom chart or graph here -->
+            <div class="chart-placeholder"></div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
 
-  <div class="artist">
-    <ion-label class="head_div"></ion-label>
-    <div class="category_div">
-      <div class="menu">
-        <div
-          class="item"
-          *ngFor="let item of [1,2,3]"
-          (click)="goToSalonSpecialist()"
-        >
-          <div class="label_container">
-            <ion-label>Employee List</ion-label>
-            <ion-label class="style">18</ion-label>
-          </div>
-          <div
-            class="bg_image"
-            [style.backgroundImage]="'url(assets/images/service.jpg)'"
-          ></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="segment_name" [class.active]="seg_id == 1">
-    <canvas id="incomeChart" #incomeChart></canvas>
-  </div>
-  <div class="services">
-    <div class="flex_div">
-      <ion-label class="start">Clients</ion-label>
-      <ion-label class="end">View All</ion-label>
-    </div>
-
-    <div class="category_div">
-      <div class="menu">
-        <div class="item" *ngFor="let item of [1,2,3,4,5,6]">
-          <img src="assets/images/service.jpg" />
-          <ion-label>Haircuts</ion-label>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="find_salon">
-    <div class="flex_div">
-      <ion-label class="start">Todo List</ion-label>
-      <ion-label class="end">View All</ion-label>
-    </div>
-
-    <div
-      class="shop"
-      *ngFor="let item of [1,2,3,4,5]"
-      (click)="goToSalonDetail()"
-    >
-      <div
-        class="bg_image back_image"
-        [style.backgroundImage]="'url(assets/images/salon.webp)'"
-      ></div>
-      <div class="shop_detail">
-        <ion-label class="name">Name</ion-label>
-
-        <ion-label class="sub_lbl">How can I help you ?</ion-label>
-
-        <div class="rate">
-          <div>
-            <ion-label class="dis_lbl">Date</ion-label>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <!-- Recent Transactions Section -->
+    <ion-row>
+      <ion-col size="12">
+        <ion-card class="back_card">
+          <ion-card-header>
+            <ion-card-title>Todo List</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-list>
+              <ion-item>
+                <ion-icon slot="start" name="cafe-outline"></ion-icon>
+                <ion-label>
+                  <h2 class="custom-font">Starbucks</h2>
+                  <p>7:30am</p>
+                </ion-label>
+                <ion-label class="date_css" slot="end" color="primary"
+                  >June 27</ion-label
+                >
+              </ion-item>
+              <ion-item>
+                <ion-icon slot="start" name="bag-outline"></ion-icon>
+                <ion-label>
+                  <h2 class="custom-font">Henry and Smith</h2>
+                  <p>Jul 08, 10:44pm</p>
+                </ion-label>
+                <ion-label class="date_css" slot="end" color="primary"
+                  >June 27</ion-label
+                >
+              </ion-item>
+              <ion-item>
+                <ion-icon slot="start" name="hammer-outline"></ion-icon>
+                <ion-label>
+                  <h2 class="custom-font">Apple Service</h2>
+                  <p>Jul 08, 9:40pm</p>
+                </ion-label>
+                <ion-label class="date_css" slot="end" color="primary"
+                  >June 27</ion-label
+                >
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

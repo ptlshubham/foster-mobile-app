@@ -78,84 +78,142 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'dashboard',
-    loadChildren: () => import('./pages/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+    path: "dashboard",
+    loadChildren: () =>
+      import("./pages/dashboard/dashboard.module").then(
+        (m) => m.DashboardPageModule
+      ),
   },
   {
-    path: 'daily-work',
-    loadChildren: () => import('./pages/daily-work/daily-work.module').then( m => m.DailyWorkPageModule)
+    path: "daily-work",
+    loadChildren: () =>
+      import("./pages/daily-work/daily-work.module").then(
+        (m) => m.DailyWorkPageModule
+      ),
   },
   {
-    path: 'tokens',
-    loadChildren: () => import('./pages/tokens/tokens.module').then( m => m.TokensPageModule)
+    path: "tokens",
+    loadChildren: () =>
+      import("./pages/tokens/tokens.module").then((m) => m.TokensPageModule),
   },
   {
-    path: 'monthly-work-report',
-    loadChildren: () => import('./pages/monthly-work-report/monthly-work-report.module').then( m => m.MonthlyWorkReportPageModule)
+    path: "monthly-work-report",
+    loadChildren: () =>
+      import("./pages/monthly-work-report/monthly-work-report.module").then(
+        (m) => m.MonthlyWorkReportPageModule
+      ),
   },
   {
-    path: 'client-list',
-    loadChildren: () => import('./pages/client-list/client-list.module').then( m => m.ClientListPageModule)
+    path: "client-list",
+    loadChildren: () =>
+      import("./pages/client-list/client-list.module").then(
+        (m) => m.ClientListPageModule
+      ),
   },
   {
-    path: 'employee-list',
-    loadChildren: () => import('./pages/employee-list/employee-list.module').then( m => m.EmployeeListPageModule)
+    path: "employee-list",
+    loadChildren: () =>
+      import("./pages/employee-list/employee-list.module").then(
+        (m) => m.EmployeeListPageModule
+      ),
   },
   {
-    path: 'ces-design-token',
-    loadChildren: () => import('./pages/ces-design-token/ces-design-token.module').then( m => m.CesDesignTokenPageModule)
+    path: "ces-design-token",
+    loadChildren: () =>
+      import("./pages/ces-design-token/ces-design-token.module").then(
+        (m) => m.CesDesignTokenPageModule
+      ),
   },
   {
-    path: 'help-desk',
-    loadChildren: () => import('./pages/help-desk/help-desk.module').then( m => m.HelpDeskPageModule)
+    path: "help-desk",
+    loadChildren: () =>
+      import("./pages/help-desk/help-desk.module").then(
+        (m) => m.HelpDeskPageModule
+      ),
   },
   {
-    path: 'todo-list',
-    loadChildren: () => import('./pages/todo-list/todo-list.module').then( m => m.TodoListPageModule)
+    path: "todo-list",
+    loadChildren: () =>
+      import("./pages/todo-list/todo-list.module").then(
+        (m) => m.TodoListPageModule
+      ),
   },
   {
-    path: 'tokens-details',
-    loadChildren: () => import('./pages/tokens-details/tokens-details.module').then( m => m.TokensDetailsPageModule)
+    path: "tokens-details",
+    loadChildren: () =>
+      import("./pages/tokens-details/tokens-details.module").then(
+        (m) => m.TokensDetailsPageModule
+      ),
   },
   {
-    path: 'employee-full-details',
-    loadChildren: () => import('./pages/employee-full-details/employee-full-details.module').then( m => m.EmployeeFullDetailsPageModule)
+    path: "employee-full-details",
+    loadChildren: () =>
+      import("./pages/employee-full-details/employee-full-details.module").then(
+        (m) => m.EmployeeFullDetailsPageModule
+      ),
   },
   {
-    path: 'employee-delete',
-    loadChildren: () => import('./pages/employee-delete/employee-delete.module').then( m => m.EmployeeDeletePageModule)
+    path: "employee-delete",
+    loadChildren: () =>
+      import("./pages/employee-delete/employee-delete.module").then(
+        (m) => m.EmployeeDeletePageModule
+      ),
   },
   {
-    path: 'calender',
-    loadChildren: () => import('./pages/calender/calender.module').then( m => m.CalenderPageModule)
+    path: "calender",
+    loadChildren: () =>
+      import("./pages/calender/calender.module").then(
+        (m) => m.CalenderPageModule
+      ),
   },
   {
-    path: 'client-full-details',
-    loadChildren: () => import('./pages/client-full-details/client-full-details.module').then( m => m.ClientFullDetailsPageModule)
+    path: "client-full-details",
+    loadChildren: () =>
+      import("./pages/client-full-details/client-full-details.module").then(
+        (m) => m.ClientFullDetailsPageModule
+      ),
   },
   {
-    path: 'client-delete',
-    loadChildren: () => import('./pages/client-delete/client-delete.module').then( m => m.ClientDeletePageModule)
+    path: "client-delete",
+    loadChildren: () =>
+      import("./pages/client-delete/client-delete.module").then(
+        (m) => m.ClientDeletePageModule
+      ),
   },
   {
-    path: 'new-ticket',
-    loadChildren: () => import('./pages/new-ticket/new-ticket.module').then( m => m.NewTicketPageModule)
+    path: "new-ticket",
+    loadChildren: () =>
+      import("./pages/new-ticket/new-ticket.module").then(
+        (m) => m.NewTicketPageModule
+      ),
   },
   {
-    path: 'client-dashboard-todo-list',
-    loadChildren: () => import('./pages/client-dashboard-todo-list/client-dashboard-todo-list.module').then( m => m.ClientDashboardTodoListPageModule)
+    path: "client-dashboard-todo-list",
+    loadChildren: () =>
+      import(
+        "./pages/client-dashboard-todo-list/client-dashboard-todo-list.module"
+      ).then((m) => m.ClientDashboardTodoListPageModule),
   },
   {
-    path: 'ces-token-details',
-    loadChildren: () => import('./pages/ces-token-details/ces-token-details.module').then( m => m.CesTokenDetailsPageModule)
+    path: "ces-token-details",
+    loadChildren: () =>
+      import("./pages/ces-token-details/ces-token-details.module").then(
+        (m) => m.CesTokenDetailsPageModule
+      ),
   },
   {
-    path: 'token-delete',
-    loadChildren: () => import('./pages/token-delete/token-delete.module').then( m => m.TokenDeletePageModule)
+    path: "token-delete",
+    loadChildren: () =>
+      import("./pages/token-delete/token-delete.module").then(
+        (m) => m.TokenDeletePageModule
+      ),
   },
   {
-    path: 'dailydetails',
-    loadChildren: () => import('./pages/dailydetails/dailydetails.module').then( m => m.DailydetailsPageModule)
+    path: "dailydetails",
+    loadChildren: () =>
+      import("./pages/dailydetails/dailydetails.module").then(
+        (m) => m.DailydetailsPageModule
+      ),
   },
 ];
 @NgModule({
