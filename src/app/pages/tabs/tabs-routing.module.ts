@@ -18,14 +18,14 @@ const routes: Routes = [
       {
         path: "tab2",
         loadChildren: () =>
-          import("../daily-work/daily-work.module").then(
-            (m) => m.DailyWorkPageModule
+          import("../tokens/tokens.module").then(
+            (m) => m.TokensPageModule
           ),
       },
       {
         path: "tab3",
         loadChildren: () =>
-          import("../tokens/tokens.module").then((m) => m.TokensPageModule),
+          import("../daily-work/daily-work.module").then((m) => m.DailyWorkPageModule),
       },
       {
         path: "tab4",
