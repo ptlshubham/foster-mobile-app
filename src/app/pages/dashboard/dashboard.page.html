@@ -1,14 +1,3 @@
-<!-- <ion-header>
-  <ion-toolbar>
-    <ion-title>Name</ion-title>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header> -->
-
 <ion-content>
   <div class="upper_div ion-padding-horizontal">
     <div class="ion_item">
@@ -26,10 +15,11 @@
         <ion-button (click)="goToNotification()">
           <ion-icon name="notifications-outline" color="dark"></ion-icon>
         </ion-button>
+        <span class="red-dot"></span>
       </ion-buttons>
     </div>
   </div>
-  <ion-grid>
+  <ion-grid class="left_padding">
     <ion-row>
       <ion-col size="6">
         <ion-card class="full-height back_card">
@@ -51,7 +41,7 @@
               <ion-card-content>
                 <div class="stat-box">
                   <div class="stat-number">10</div>
-                  <div class="stat-label">Employees</div>
+                  <div class="stat-label">Clients</div>
                 </div>
               </ion-card-content>
             </ion-card>
@@ -60,11 +50,11 @@
             <ion-card class="full-height back_card">
               <ion-card-content>
                 <div class="stat-box">
-                  <div class="stat-number">45</div>
-                  <div class="stat-label">Clients</div>
+                  <div class="stat-number">704</div>
+                  <div class="stat-label">Daily Work</div>
                   <div class="button-row">
-                    <ion-button size="small" expand="block">Mark</ion-button>
-                    <ion-button size="small" expand="block">Develop</ion-button>
+                    <ion-button size="small" expand="block">29</ion-button>
+                    <ion-button size="small" expand="block">675</ion-button>
                   </div>
                 </div>
               </ion-card-content>
@@ -80,7 +70,7 @@
           <ion-card-content>
             <div class="stat-box">
               <div class="stat-number">2</div>
-              <div class="stat-label">Part</div>
+              <div class="stat-label">Pending</div>
             </div>
           </ion-card-content>
         </ion-card>
@@ -90,7 +80,7 @@
           <ion-card-content>
             <div class="stat-box">
               <div class="stat-number">5</div>
-              <div class="stat-label">Proj</div>
+              <div class="stat-label">Processing</div>
             </div>
           </ion-card-content>
         </ion-card>
@@ -100,7 +90,7 @@
           <ion-card-content>
             <div class="stat-box">
               <div class="stat-number">100</div>
-              <div class="stat-label">Comp</div>
+              <div class="stat-label">Completed</div>
             </div>
           </ion-card-content>
         </ion-card>
@@ -109,7 +99,7 @@
 
     <ion-row>
       <ion-col size="12">
-        <ion-card class="back_card">
+        <ion-card class="back_card top_space">
           <ion-card-content>
             <!-- Insert your bottom chart or graph here -->
             <div class="chart-placeholder"></div>
@@ -120,46 +110,44 @@
 
     <!-- Recent Transactions Section -->
     <ion-row>
-      <ion-col size="12">
-        <ion-card class="back_card">
-          <ion-card-header>
-            <ion-card-title>Todo List</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <ion-list>
-              <ion-item>
-                <ion-icon slot="start" name="cafe-outline"></ion-icon>
-                <ion-label>
-                  <h2 class="custom-font">Starbucks</h2>
-                  <p>7:30am</p>
-                </ion-label>
-                <ion-label class="date_css" slot="end" color="primary"
-                  >June 27</ion-label
-                >
-              </ion-item>
-              <ion-item>
-                <ion-icon slot="start" name="bag-outline"></ion-icon>
-                <ion-label>
-                  <h2 class="custom-font">Henry and Smith</h2>
-                  <p>Jul 08, 10:44pm</p>
-                </ion-label>
-                <ion-label class="date_css" slot="end" color="primary"
-                  >June 27</ion-label
-                >
-              </ion-item>
-              <ion-item>
-                <ion-icon slot="start" name="hammer-outline"></ion-icon>
-                <ion-label>
-                  <h2 class="custom-font">Apple Service</h2>
-                  <p>Jul 08, 9:40pm</p>
-                </ion-label>
-                <ion-label class="date_css" slot="end" color="primary"
-                  >June 27</ion-label
-                >
-              </ion-item>
-            </ion-list>
-          </ion-card-content>
-        </ion-card>
+      <ion-col size="12" class="top_space">
+        <ion-card-header>
+          <ion-card-title>Todo List</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item class="top_space">
+              <ion-icon slot="start" name="cafe-outline"></ion-icon>
+              <ion-label>
+                <h2 class="custom-font">Starbucks</h2>
+                <p class="stat-label">7:30am</p>
+              </ion-label>
+              <ion-label class="date_css" slot="end" color="primary"
+                >June 27</ion-label
+              >
+            </ion-item>
+            <ion-item>
+              <ion-icon slot="start" name="bag-outline"></ion-icon>
+              <ion-label>
+                <h2 class="custom-font">Henry and Smith</h2>
+                <p class="stat-label">Jul 08, 10:44pm</p>
+              </ion-label>
+              <ion-label class="date_css" slot="end" color="primary"
+                >June 27</ion-label
+              >
+            </ion-item>
+            <ion-item>
+              <ion-icon slot="start" name="hammer-outline"></ion-icon>
+              <ion-label>
+                <h2 class="custom-font">Apple Service</h2>
+                <p class="stat-label">Jul 08, 9:40pm</p>
+              </ion-label>
+              <ion-label class="date_css" slot="end" color="primary"
+                >June 27</ion-label
+              >
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
       </ion-col>
     </ion-row>
   </ion-grid>

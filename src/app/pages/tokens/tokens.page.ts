@@ -10,7 +10,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./tokens.page.scss"],
 })
 export class TokensPage implements OnInit {
-  tabs = "daily";
+  tabs = "token";
   tokenTabs: string = "all";
 
   constructor(

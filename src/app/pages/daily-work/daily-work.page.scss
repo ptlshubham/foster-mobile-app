@@ -14,15 +14,30 @@ ion-content {
 
       ion-buttons {
         margin-right: 10px;
+        margin-top: -5px;
 
         ion-button {
-          border: 1px solid lightgrey;
-          border-radius: 10px;
+          // border: 1px solid lightgrey;
+          // border-radius: 10px;
+          margin-top: 10px;
 
           ion-icon {
-            font-size: 18px;
+            font-size: 25px;
           }
+
         }
+      }
+
+      .red-dot {
+        position: absolute;
+        top: 11px;
+        right: 2px;
+        width: 8px;
+        height: 8px;
+        background-color: red;
+        border-radius: 50%;
+        padding: 0;
+        box-shadow: 0 0 5px rgba(255, 0, 0, 1);
       }
     }
   }
@@ -116,7 +131,7 @@ ion-content {
             ion-segment-button {
               padding: 8px 0px;
               --border-radius: 30px;
-              --indicator-color:#0A8F9C !important;
+              --indicator-color: #0A8F9C !important;
               --indicator-box-shadow: transparent !important;
               --color-checked: white;
               --background: #ffff;
