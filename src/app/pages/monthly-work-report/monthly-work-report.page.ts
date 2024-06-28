@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-monthly-work-report",
@@ -75,7 +76,10 @@ export class MonthlyWorkReportPage implements OnInit {
       new_User: 0.87,
     },
   ]
-  constructor() { }
+  constructor( private router: Router,) { }
 
+  goToCalender(){
+    this.router.navigate(['calender']);
+  }
   ngOnInit() { }
 }

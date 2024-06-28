@@ -214,7 +214,11 @@ const routes: Routes = [
       import("./pages/dailydetails/dailydetails.module").then(
         (m) => m.DailydetailsPageModule
       ),
+  },  {
+    path: 'new-token',
+    loadChildren: () => import('./pages/new-token/new-token.module').then( m => m.NewTokenPageModule)
   },
+
 ];
 @NgModule({
   imports: [

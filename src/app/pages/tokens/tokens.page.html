@@ -1,5 +1,9 @@
-<!-- your-component.html -->
-<ion-content class="ion-padding-horizontal">
+ <ion-content fixed-slot-placement="before" class="ion-padding-horizontal">
+  <ion-fab class="add" horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button (click)="goToNewtoken()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   <div class="upper_div upper_space">
     <div>
       <ion-label class="head_lbl">Tokens</ion-label>
@@ -16,11 +20,11 @@
 
   <div class="segment_div_upper">
     <ion-segment [(ngModel)]="tabs" mode="ios">
-      <ion-segment-button value="daily">
-        <ion-label>Daily</ion-label>
-      </ion-segment-button>
       <ion-segment-button value="token">
         <ion-label>Token</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="daily">
+        <ion-label>Daily</ion-label>
       </ion-segment-button>
     </ion-segment>
   </div>
@@ -188,4 +192,4 @@
       </div>
     </div>
   </div>
-</ion-content>
+</ion-content> 

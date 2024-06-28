@@ -1,20 +1,14 @@
-<ion-header>
-  <ion-toolbar background="#0A8F9C">
-    <ion-segment [(ngModel)]="current" mode="md">
-      <ion-segment-button [value]="1">
-        <ion-label>Ongoing</ion-label>
-      </ion-segment-button>
-      <ion-segment-button [value]="2">
-        <ion-label>Old</ion-label>
-      </ion-segment-button>
-    </ion-segment>
+  <ion-content class="ion-padding">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="back()">
+        <ion-icon name="arrow-back-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
-</ion-header>
-
-<ion-content class="ion-padding">
   <div *ngIf="current == 1">
     <div class="head">
-      <ion-button fill="clear" (click)="back()">
+      <ion-button fill="clear" (click)="bk()">
         <ion-icon
           name="chevron-back-outline"
           slot="icon-only"

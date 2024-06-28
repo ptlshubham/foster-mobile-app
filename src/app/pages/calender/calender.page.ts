@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { CalendarComponent } from "ionic2-calendar";
+import { NavController } from "@ionic/angular";
 import * as moment from "moment";
 
 @Component({
@@ -22,7 +23,7 @@ export class CalenderPage implements OnInit {
   @ViewChild(CalendarComponent) myCal: CalendarComponent;
 
   bookings: any[] = [];
-  constructor() {
+  constructor(private navCtrl: NavController) {
     setTimeout(() => {
       this.createRandomEvents();
     }, 1000);
@@ -34,7 +35,7 @@ export class CalenderPage implements OnInit {
     this.myCal.slideNext();
   }
 
-  back() {
+  bk() {
     this.myCal.slidePrev();
   }
 
@@ -122,5 +123,9 @@ export class CalenderPage implements OnInit {
 
   removeEvents() {
     this.eventSource = [];
+  }
+
+  back(){
+    this.navCtrl.back();
   }
 }

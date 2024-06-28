@@ -3,6 +3,7 @@ import { ModalController, Platform } from "@ionic/angular";
 import { TokensDetailsPage } from "../tokens-details/tokens-details.page";
 import { TokenDeletePage } from "../token-delete/token-delete.page";
 import { Router } from "@angular/router";
+import { NewTokenPage } from "../new-token/new-token.page";
 
 @Component({
   selector: "app-tokens",
@@ -10,7 +11,7 @@ import { Router } from "@angular/router";
   styleUrls: ["./tokens.page.scss"],
 })
 export class TokensPage implements OnInit {
-  tabs = "daily";
+  tabs = "token";
   tokenTabs: string = "all";
 
   constructor(
@@ -26,6 +27,15 @@ export class TokensPage implements OnInit {
     }
   }
 
+  async goToNewtoken(){
+    const modal = await this.modalController.create({
+      component: NewTokenPage,
+      cssClass: "custom_modal",
+      componentProps: { value: 123 },
+    });
+
+    await modal.present();
+  }
   async goToTokendetails() {
     const modal = await this.modalController.create({
       component: TokensDetailsPage,
