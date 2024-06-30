@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { TokenCalenderPage } from 'src/app/token-calender/token-calender.page';
+
 
 @Component({
   selector: 'app-new-token',
@@ -93,9 +95,23 @@ export class NewTokenPage implements OnInit {
    ];
 
   visibleOptions: { value: string, label: string }[] = [];
+  selectedDate: string;
+    modalController: any;
+
 
   constructor(private modalCtrl: ModalController) {
     this.loadVisibleOptions();
+    this.selectedDate = new Date().toISOString();
+  }
+
+  async handleTokencalender(){
+    const modal = await this.modalController.create({
+      component: TokenCalenderPage,
+      cssClass: "custom_modal_bottom",
+      componentProps: { value: 123 },
+    });
+
+    await modal.present();
   }
 
   loadVisibleOptions() {

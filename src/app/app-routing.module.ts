@@ -218,6 +218,10 @@ const routes: Routes = [
     path: 'new-token',
     loadChildren: () => import('./pages/new-token/new-token.module').then( m => m.NewTokenPageModule)
   },
+  {
+    path: 'token-calender',
+    loadChildren: () => import('./token-calender/token-calender.module').then( m => m.TokenCalenderPageModule)
+  },
 
 ];
 @NgModule({
