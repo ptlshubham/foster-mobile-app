@@ -1,65 +1,53 @@
-ion-header {
-    ion-toolbar {
-      --background: #ffff;
-      ion-title {
-        padding: 0px;
-        font-family: "bold";
-      }
-      ion-buttons {
-        padding: 5px 2px 5px 2px;
-        margin: 10px;
-        ion-button {
-          height: 40px;
-          width: 40px;
-        //   border: 1px solid lightgray;
-        //   --border-radius: 50%;
-        //   border-radius: 50%;
-          ion-icon {
-            color: black;
-          }
-        }
-      }
-    }
+:host {
+  display: block;
+  // width: 100%;
+}
+.upper_div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .head_lbl {
+    font-size: 20px;
+    font-family: "bold";
+    margin-left: 10px;
   }
-  .content {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    ion-item {
-    //   border: 1px solid lightgray;
-    //   border-radius: 10px;
-    //   margin: 10px 0px 10px 0px;
-      ion-input {
-        // margin: 15px 0px 15px 0px;
-        border: 1px solid lightgray;
-      border-radius: 10px;
-      margin: 10px 0px 10px 0px;
-      }
-    }
-    ion-row {
-      ion-col {
-        display: flex;
-        align-items: center;
-        ion-label {
-          font-size: 13px;
-        }
-        ion-item {
-          margin: 0px;
-        }
-      }
-    }
-  }
-  
-  .text {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    h6 {
-      font-family: "bold";
-      font-size: 13px;
-      margin: 0px;
-    }
-  }
-  
+}
+
+ion-content{
+  max-height: max-content;
+  overflow-y: auto;
+
+ion-grid {
+  padding: 10px;
+}
+
+ion-row {
+  margin-bottom: 7px;
+}
+
+ion-select.always-flip::part(icon) {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+ion-select.always-flip.select-expanded::part(icon) {
+  transform: rotate(180deg);
+}
+
+ion-select.never-flip::part(icon) {
+  transform: none;
+}
+
+ion-label {
+  font-weight: bold;
+}
+
+ion-select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  color: black
+}
+}

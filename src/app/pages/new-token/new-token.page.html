@@ -1,73 +1,88 @@
 <ion-header mode="md" class="ion-no-border">
   <ion-toolbar>
+    <div class="upper_div upper_space">
+    <ion-label class="head_lbl">Generate Ticket</ion-label>
     <ion-buttons slot="end">
       <ion-button class="btn" (click)="dismiss()">
         <ion-icon slot="start" name="close-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
+  </div>
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="ion-padding">
 
-  <div class="content">
+<ion-content>
+  <ion-card>
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label>Select Client</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" placeholder="Select Client"
+            (ionChange)="onSelectChange($event)" (ionInfinite)="loadMoreOptions($event)">
+            <ion-select-option *ngFor="let item of clients" [value]="item.value">{{item.clientName}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
 
-    <ion-item lines="none">
-      <ion-label>Select Client</ion-label>
-      <ion-input type="text" placeholder="Select Client"></ion-input>
-    </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-label>Select Manager</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" placeholder="Select Manager"
+          (ionChange)="onSelectChange($event)" (ionInfinite)="loadMoreOptions($event)">
+          <ion-select-option *ngFor="let item of manager" [value]="item.value">{{item.managerName}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Select Designer</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" placeholder="Select Designer"
+          (ionChange)="onSelectChange($event)" (ionInfinite)="loadMoreOptions($event)">
+          <ion-select-option *ngFor="let item of designer" [value]="item.value">{{item.designerName}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Select Label</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-select class="always-flip" toggleIcon="caret-down-sharp" interface="popover" placeholder="Select Label"
+          (ionChange)="onSelectChange($event)" (ionInfinite)="loadMoreOptions($event)">
+          <ion-select-option *ngFor="let item of label" [value]="item.value">{{item.label}}</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Delivery Date</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="selectedDate" name="date"></ion-datetime>
+          
+        </ion-col>
+      </ion-row>
 
-    <ion-item lines="none">
-      <ion-label>Select Manager</ion-label>
-      <ion-input type="text" placeholder="Select Manager"></ion-input>
-    </ion-item>
-
-    <ion-item lines="none">
-      <ion-label>Select Designer</ion-label>
-      <ion-input type="text" placeholder="Select Designer"></ion-input>
-    </ion-item>
-
-    <ion-item lines="none">
-      <ion-label>Select Label</ion-label>
-      <ion-input type="text" placeholder="Select Label"></ion-input>
-    </ion-item>
-
-
-    <ion-row>
-      <ion-col size="4">
-        <ion-label>Expiration Date :</ion-label>
-      </ion-col>
-      <ion-col size="4">
-        <ion-item lines="none">
-          <ion-input type="text" placeholder="MM"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="4">
-        <ion-item lines="none">
-          <ion-input type="text" placeholder="YY"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-    <ion-item lines="none">
-      <ion-input type="text" placeholder="Security Code"></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-input type="text" placeholder="First Name"></ion-input>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-input type="text" placeholder="Last Name"></ion-input>
-    </ion-item>
-
-  </div>
-
-  <div class="text">
-    <h6>You can remove this card at anytime!</h6>
-    <ion-toggle slot="start" mode="md" color="success"></ion-toggle>
-  </div>
-
-  <ion-button class="content_button" (click)="onAdd()" expand="block">
-    Add Card
-  </ion-button>
-
+    </ion-grid>
+  </form>
+</ion-card>
 </ion-content>
